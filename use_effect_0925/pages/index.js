@@ -1,25 +1,28 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import React, {useState, useEffect} from "react";
-
-
-const inter = Inter({ subsets: ['latin'] })
+import Card from "@/components/Card"
 
 export default function Home() {
-  const [articles, setArticles] = useState([
-    {title: "impact of tech", user:"naraa", color:"blue"},
-    {title: "change of tech", user:"saraa",  color:"red"}
-  ])
-  // setArticles
-  // )
-  // return (
-  //   <main>
-  //    Welcome
-  //   <div>
-  //   {articles.map(() => (
-  //     <div> clas
-  //     <div>hello</div>
-  //     </div>
-  //     </main>
-  // );}  
-}
+  const [blogs, setBlogs] = useState([]);
+                                                // (statiin ner , statiin function )
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const res = await  fetch("https://dev.to/api/articles?per_page=9");
+    const data = await res.json();
+    console.log(data);
+    setBlogs(data);
+  };
+  return <main className ={'container mx-auto'}>
+    <section>
+     <h2>All blog post</h2>
+     <div className= "grid grid-cols-3 gap-3 ">
+       {blogs.map((blog, i) => (
+      <Card/>
+    ))}
+    </div>
+    </section>
+  </main>
+};
+  
