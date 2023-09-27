@@ -14,12 +14,12 @@ export default function Home() {
     console.log(data);
     setBlogs(data);
   };
-  return <main className ={'container mx-auto'}>
+  return <main className ={'container mx-auto '}>
     <section>
      <h2>All blog post</h2>
-     <div className= "grid grid-cols-3 gap-3 ">
+     <div className= "grid grid-cols-3 gap-2 ">
        {blogs.map((blog, i) => (
-      <Card/>
+      <Card blog={blog}/>
     ))}
     </div>
     </section>
