@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from "react";
 
+import BlogDetail from "@/pages/blog/[id]";
+import Link from "next/link";
 
 const Card = ( { blog }) => {
-return (
+return (<Link href = {"/blog/"+blog.id}>
 <div className="border  rounded-lg flex flex-col p-2 bg-white  w-64 ">
           <img src={blog.cover_image ? blog.cover_image : "./default.avif"} className="h-40 w-48  border rounded-md"/>
           <div className="flex flex-col">
@@ -14,6 +16,7 @@ return (
             </div>
           </div>
         </div>
+        </Link>
         );
 };
 

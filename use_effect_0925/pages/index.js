@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Card from "@/components/Card"
+// import BlogDetail from "./blog/[id]";
+
 
 export default function Home() {
   const [blogs, setBlogs] = useState([]);
@@ -16,7 +18,7 @@ export default function Home() {
   };
   return <main className ={'container mx-auto '}>
     <section>
-     <h2>All blog post</h2>
+     <h2 className="font-bold">All blog posts</h2>
      <div className= "grid grid-cols-3 gap-2 ">
        {blogs.map((blog, i) => (
       <Card blog={blog}/>

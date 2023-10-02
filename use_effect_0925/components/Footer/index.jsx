@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
     return (
     <div className="container">
-               <div className="flex justify-between bg-grey-300">
+               <div className="flex justify-between bg-grey-300  ">
                  <a href="/">
                      <img src="/logo.svg" alt = " logo" />
                      </a>
