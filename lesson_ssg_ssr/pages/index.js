@@ -1,20 +1,18 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import Card from "@/components/Card"
-// import BlogDetail from "./blog/[id]";
 
 
 export default function Home() {
-  const [blogs, setBlogs] = useState([]);
-                                                // (statiin ner , statiin function )
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const [blogs] = useState([]);
 
-  const fetchData = async () => {
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+    export async function GetStaticProps () {
     const res = await  fetch("https://dev.to/api/articles?per_page=9");
     const data = await res.json();
     console.log(data);
-    setBlogs(data);
+    StaticBlog(data);
   };
   return <main className ={'container mx-auto '}>
     <section>
