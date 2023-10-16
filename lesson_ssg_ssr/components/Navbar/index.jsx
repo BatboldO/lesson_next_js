@@ -6,14 +6,14 @@ const Navbar = () => {
     <div className="container">
                <div className="flex justify-between  ml-96">
                  <a href="/">
-                     <img src="/logo.png" alt = "Logo"  className=""/>
+                     <img src="/imgs/logo.png" alt = "Logo"  className=""/>
                      </a>
                      <div className="flex gap-8 text-[#3B3C4A]">
-                     <a href="/">Home</a>
-                     <a href="/blog">Blog</a>
-                     <a href="/contact">Contact</a>
+                     <Link href="/">Home</Link>
+                     <Link href="/blog">Blog</Link>
+                     <Link href="/contact">Contact</Link>
                      </div>
-                     <input className="border rounded-md p-1" type= "text" placeholder="Search:" img src="/search.svg"/>
+                     <input className="border rounded-md p-1" type= "text" placeholder="Search:" img src="/imgs/search.png"/>
                </div>
            </div>
     );

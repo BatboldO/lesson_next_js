@@ -3,7 +3,7 @@ import style from "@/components/Footer/style.module.css"
 
 const Footer = () => {
     return (
-    <div className="containerr">
+    <div className="container">
                <div className="bg-[#E8E8EA] w-full h-96 ">
                 
                 <div className="py-16 px-16 flex flex-col">
@@ -22,11 +22,11 @@ const Footer = () => {
                      <a href="/contact">Contact</a>
                      </div>
 
-                    <div>
-                     <img src="/facebook.png"/>
-                     <img src="/instagram.png"/>
-                     <img src="/linkedin.png"/>
-                     <img src="/twitter.png"/>
+                    <div className="w-6 h-6">
+                     <img src="/imgs/facebook.png"/>
+                     <img src="/imgs/instagram.png"/>
+                     <img src="/imgs/linkedin.png"/>
+                     <img src="/imgs/twitter.png"/>
                     </div>
                     
                  </div>
