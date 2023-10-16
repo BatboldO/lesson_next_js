@@ -3,7 +3,7 @@ import style from "@/components/Footer/style.module.css"
 
 const Footer = () => {
     return (
-    <div className="containerr">
+    <div className="">
                <div className="bg-[#E8E8EA] w-full h-96 ">
                 
                 <div className="py-16 px-16 flex flex-col">
@@ -22,7 +22,7 @@ const Footer = () => {
                      <a href="/contact">Contact</a>
                      </div>
 
-                    <div>
+                    <div className=" mx-16 flex h-6 w-6">
                      <img src="/facebook.png"/>
                      <img src="/instagram.png"/>
                      <img src="/linkedin.png"/>
@@ -45,3 +45,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
